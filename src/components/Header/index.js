@@ -49,6 +49,13 @@ const MainNav = styled.nav`
 `;
 
 export default class Header extends Component {
+  componentDidMount() {
+    fetch('/.netlify/functions/jokes')
+      .then(function (response) {
+        console.log(response.body);
+      });
+  }
+
   componentDidUpdate = (prevProps, prevState) => {
     const { location } = this.props;
     if (location.pathname !== prevProps.location.pathname) {
