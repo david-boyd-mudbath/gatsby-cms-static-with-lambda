@@ -65,17 +65,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-exports.handler = function handler(event, context, callback) {
-  callback(null, {
-    statusCode: 200,
-    body: JSON.stringify({ msg: 'Hi' }, null, 2)
-  });
-};
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\dev\\demo\\gatsby-cms-1\\src\\lambda\\hello.js'");
 
 /***/ })
 /******/ ])));

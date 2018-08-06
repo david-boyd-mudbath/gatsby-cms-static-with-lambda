@@ -50,11 +50,11 @@ const MainNav = styled.nav`
 
 export default class Header extends Component {
   componentDidMount() {
-    const lambdaURL = process.env === 'production' ? '/.netlify/functions' : '/localhost:9000';
-  fetch(`${lambdaURL}/hello`)
+    //const lambdaURL = process.env === 'production' ? '/.netlify/functions' : '/localhost:9000';
+  //fetch(`${lambdaURL}/hello`)
+  fetch('/.netlify/functions/welcome')
   .then(res => res.json())
-  .then(data => console.log(data.msg))
-  .catch(err => console.error(err))
+  .then(data => console.log(data.msg));
   }
 
   componentDidUpdate = (prevProps, prevState) => {
