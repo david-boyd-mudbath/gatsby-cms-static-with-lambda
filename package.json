@@ -6,6 +6,7 @@
     "gatsby": "^1.9.202",
     "gatsby-image": "^1.0.38",
     "gatsby-link": "^1.6.37",
+    "gatsby-plugin-netlify": "^1.0.21",
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-plugin-sharp": "^1.6.31",
     "gatsby-plugin-styled-components": "^2.0.7",
@@ -21,8 +22,11 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
+    "build": "yarn run build:gatsby && yarn run build:lambda",
+    "build:gatsby": "gatsby build",
+    "build:lambda": "netlify-lambda build src/lambda",
     "develop": "gatsby develop",
+    "develop:lambda": "netlify-lambda serve src/lambda",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
