@@ -1,3 +1,6 @@
-module.exports = function(context, cb) {
-  cb(null, { hello: 'Anonymous' });
-};
+export function handler(event, context, callback) {
+  callback(null, {
+    statusCode: 200,
+    body: JSON.stringify({msg: "Hello, Jokes!"})
+  })
+}
