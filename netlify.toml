@@ -4,4 +4,4 @@
 # “command” is your build command.
 
 [build]
-  functions = "lambda"
+  functions = "functions"
