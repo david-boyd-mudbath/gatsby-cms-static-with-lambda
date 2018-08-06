@@ -50,7 +50,7 @@ const MainNav = styled.nav`
 
 export default class Header extends Component {
   componentDidMount() {
-    fetch('/.netlify/functions/jokes')
+    fetch('/.netlify/functions/hello')
     .then(response => response.json())
     .then(json => this.setState({msg: json.msg}));
   }
