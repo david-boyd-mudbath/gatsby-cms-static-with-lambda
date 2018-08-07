@@ -24,11 +24,8 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "yarn run build:gatsby && yarn run build:lambda",
-    "build:gatsby": "gatsby build",
-    "build:lambda": "netlify-lambda build src/lambda",
+    "build": "gatsby build",
     "develop": "gatsby develop",
-    "develop:lambda": "netlify-lambda serve src/lambda",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
