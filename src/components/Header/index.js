@@ -49,14 +49,7 @@ const MainNav = styled.nav`
 `;
 
 export default class Header extends Component {
-  componentDidMount() {
-    //const lambdaURL = process.env === 'production' ? '/.netlify/functions' : '/localhost:9000';
-  //fetch(`${lambdaURL}/hello`)
-  fetch('/.netlify/functions/welcome')
-  .then(res => res.json())
-  .then(data => console.log(data.msg));
-  }
-
+  
   componentDidUpdate = (prevProps, prevState) => {
     const { location } = this.props;
     if (location.pathname !== prevProps.location.pathname) {
@@ -94,9 +87,10 @@ export default class Header extends Component {
                 textDecoration: "none"
               }}
             >
-              <img src={logo} alt="Level Up Logo" />
+              <img src={logo} alt="Logo" />
             </Link>
           </h1>
+          
           <MainNav>
             <ul>
               <li>
@@ -105,7 +99,7 @@ export default class Header extends Component {
               <li>
                 <Link to="/about">About</Link>
               </li>
-            </ul>
+            </ul>>
           </MainNav>
         </HeaderContainer>
         <Img
