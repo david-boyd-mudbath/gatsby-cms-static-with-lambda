@@ -24,7 +24,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm run build:gatsby && npm run build:lambda",
+    "build:gatsby": "gatsby build",
+    "build:lambda": "netlify-lambda build src/lambda",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
