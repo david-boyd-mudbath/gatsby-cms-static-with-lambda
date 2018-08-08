@@ -5,7 +5,9 @@ exports.handler = async (event, context) => {
     .then(response => response.json())
     .then(data => ({
       statusCode: 200,
-      body: JSON.stringify({ temperature: data.main.temp })
+      //body: JSON.stringify({  temperature: data.main.temp })
+      body: JSON.stringify({  temperature: Math.floor(Math.random() * Math.floor(20)) })
+      
     }))
     .catch(error => ({ statusCode: 422, body: String(error) }));
 };  
