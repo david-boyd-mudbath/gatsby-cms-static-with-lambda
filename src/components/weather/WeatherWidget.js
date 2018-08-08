@@ -5,7 +5,7 @@ export default class WeatherWidget extends Component {
     this.state = { temperature: null };
   }
   componentDidMount() {
-    fetch('/.netlify/functions')
+    fetch('/.netlify/functions/weather')
       .then(res => res.json())
       .then(data =>
         this.setState({ temperature: data.temperature }));
