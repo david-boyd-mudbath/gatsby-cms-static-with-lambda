@@ -1,4 +1,4 @@
-# gatsby-starter-default
-A default Gatsby starter(customised)
+# Examples of building a Blog with Gatsby and Lambdas
 
-credit - www.leveluptutorials.com 
+
+Credit base example from -> www.leveluptutorials.com 
